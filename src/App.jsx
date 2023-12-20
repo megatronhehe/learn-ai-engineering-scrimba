@@ -16,6 +16,7 @@ function App() {
 		try {
 			const response = await hf.textGeneration({
 				inputs: input,
+				model: "HuggingFaceH4/zephyr-7b-beta",
 			});
 			setAnswer(response.generated_text);
 		} catch (error) {
